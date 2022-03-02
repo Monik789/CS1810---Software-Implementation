@@ -11,9 +11,10 @@ public class TicketNumber {
 		public TicketNumber()
 		{
 			Random r = new Random();
-			number = 10000000 + (r.nextLong() % 9999999);				
+			
+			//         (inclusive min,exclusive max)
+			number = r.longs(10000000,100000000).findFirst().getAsLong();			
 		}
-		
 		
 		public long GetNumber() {return number;}
 }
