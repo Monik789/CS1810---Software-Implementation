@@ -69,9 +69,7 @@ public class MainFrame extends JFrame {
 		
 		JButton btnNewButton = new JButton("Order");
 		btnNewButton.setBounds(1077, 62, 117, 29);
-		btnNewButton.addActionListener(new Algorithms());
 		contentPane.add(btnNewButton);
-		
 
 		
 		JLabel lblNewLabel_2 = new JLabel("Restaurant");
@@ -404,8 +402,8 @@ public class MainFrame extends JFrame {
 		float j = 8.99f;
 		float k = 14.99f;
 		
-		System.out.println(a * (int) spinner_1.getValue());
-		System.out.println(b * (int) spinner_2.getValue());
+		//(a * (int) spinner_1.getValue());
+		
 		System.out.println(c * (int) spinner_3.getValue());
 		System.out.println(d * (int) spinner_4.getValue());
 		System.out.println(e * (int) spinner_5.getValue());
