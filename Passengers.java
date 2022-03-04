@@ -240,7 +240,7 @@ public class Passengers {
 		frame.getContentPane().add(ReturningSeat1);
 
 //		JLabel for the bottom of the page.
-		JLabel BottomLabel = new JLabel("© Brunel City London Airport");
+		JLabel BottomLabel = new JLabel("Â© Brunel City London Airport");
 		BottomLabel.setForeground(Color.BLACK);
 		BottomLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		BottomLabel.setFont(new Font("Calibri", Font.BOLD, 18));
@@ -303,7 +303,7 @@ public class Passengers {
 //		If user does not fill out First Name text field then a error message will appear.
 		if(firstName.isBlank())
 		{
-			JOptionPane.showMessageDialog(null,"Please enter your First Name");
+			JOptionPane.showMessageDialog(null,"Please enter your First Name.");
 			pass = false;
 		}
 //		If user does not fill out a valid First Name that should be at least 3 characters long then a warning message will appear.
@@ -317,7 +317,7 @@ public class Passengers {
 			else
 				if(surname.isBlank())
 			{
-				JOptionPane.showMessageDialog(null,"Please enter your Surname");
+				JOptionPane.showMessageDialog(null,"Please enter your Surname.");
 				pass = false;
 			}
 //			If user does not fill out a valid Surname that should be at least 3 characters long then a warning message will appear.
@@ -347,13 +347,13 @@ public class Passengers {
 			else
 				if(telephoneNumber.isBlank())
 				{
-					JOptionPane.showMessageDialog(null,"Please enter your Telephone Number");
+					JOptionPane.showMessageDialog(null,"Please enter your Telephone Number.");
 					pass = false;
 				}
 //			If user enter a Telephone Number which is more or less then 11 digits then a warning message will appear.		
-				else if (!telephoneNumber.matches("[0-9]{11,}"))
+				else if (!telephoneNumber.matches("[0-9]{11}"))
 				{
-					JOptionPane.showMessageDialog(null,"Please enter 11 digits Telephone Number");
+					JOptionPane.showMessageDialog(null,"Please enter 11 digits Telephone Number.");
 					pass = false;
 				}
 
@@ -361,13 +361,13 @@ public class Passengers {
 				else
 					if(emailAddress.isBlank())
 					{
-						JOptionPane.showMessageDialog(null,"Please enter your Email Address");
+						JOptionPane.showMessageDialog(null,"Please enter your Email Address.");
 						pass = false;
 					}		
 //			If user does not fill out a valid Email Address that includes '@' then a warning message will appear.
 					else if (!emailAddress.matches("[a-z A-Z 0-9.!#$'*+/=?{|}~^-]+@[a-z A-Z 0-9.-]+$"))
 					{
-						JOptionPane.showMessageDialog(null," Please enter a valid Email Address that Includes '@'.");
+						JOptionPane.showMessageDialog(null," Please enter a valid Email Address that includes '@'.");
 						pass = false;
 					}
 
@@ -375,13 +375,13 @@ public class Passengers {
 					else 
 						if(numberofBags =="Select Baggage Amount")
 						{
-							JOptionPane.showMessageDialog(null,"Please select number of baggage");
+							JOptionPane.showMessageDialog(null,"Please select amount of baggage.");
 							pass = false;
 						}
 //			If user enters different amount of bags apart from 0 to 9 then a warning message will appear. 
 						else if (!numberofBags.matches("[0-9]"))
 						{
-							JOptionPane.showMessageDialog(null," Please enter a valid Number of Bag from 0-9.");
+							JOptionPane.showMessageDialog(null," Please enter a valid amount of baggage from 0-9.");
 							pass = false;
 						}
 
