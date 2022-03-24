@@ -50,7 +50,7 @@ public class ErrorInvalidInformation extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Invlad Information Given");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 21));
-		lblNewLabel.setBounds(22, 121, 406, 29);
+		lblNewLabel.setBounds(98, 121, 253, 29);
 		contentPane.add(lblNewLabel);
 	}
 

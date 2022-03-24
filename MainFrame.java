@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,7 +13,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	protected JTextField textField;
@@ -69,6 +71,7 @@ public class MainFrame extends JFrame {
 		
 		JButton btnNewButton = new JButton("Order");
 		btnNewButton.setBounds(1077, 62, 117, 29);
+		btnNewButton.addActionListener(this);
 		contentPane.add(btnNewButton);
 
 		
@@ -283,7 +286,10 @@ public class MainFrame extends JFrame {
 		lblNewLabel_37.setBounds(878, 230, 136, 16);
 		contentPane.add(lblNewLabel_37);
 		
+		
+		
 		JSpinner spinner_1 = new JSpinner();
+		
 		spinner_1.setBounds(654, 253, 34, 26);
 		contentPane.add(spinner_1);
 		
@@ -331,6 +337,7 @@ public class MainFrame extends JFrame {
 		lblNewLabel_38.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		lblNewLabel_38.setBounds(220, 258, 52, 16);
 		contentPane.add(lblNewLabel_38);
+		
 		
 		JLabel lblNewLabel_39 = new JLabel("£2.50");
 		lblNewLabel_39.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
@@ -402,33 +409,48 @@ public class MainFrame extends JFrame {
 		float j = 8.99f;
 		float k = 14.99f;
 		
-		//(a * (int) spinner_1.getValue());
 		
-		System.out.println(c * (int) spinner_3.getValue());
-		System.out.println(d * (int) spinner_4.getValue());
-		System.out.println(e * (int) spinner_5.getValue());
-		System.out.println(f * (int) spinner_6.getValue());
-		System.out.println(g * (int) spinner_7.getValue());
-		System.out.println(h * (int) spinner_8.getValue());
-		System.out.println(i * (int) spinner_9.getValue());
-		System.out.println(j * (int) spinner_10.getValue());
-		System.out.println(k * (int) spinner_11.getValue());
+		//System.out.println(k * (int) spinner_11.getValue());
 		
 		
 		
-		/*
-		int a = (int) spinner_1.getValue();
-		int b = (int) spinner_2.getValue();
-		int c = (int) spinner_3.getValue();
-		int d = (int) spinner_4.getValue();
-		int e = (int) spinner_5.getValue();
-		int f = (int) spinner_6.getValue();
-		int g = (int) spinner_7.getValue();
-		int h = (int) spinner_8.getValue();
-		int i = (int) spinner_9.getValue();
-		int j = (int) spinner_10.getValue();
-		int k = (int) spinner_11.getValue();
-		*/
-		//System.out.println(a+b+c+d+e+f+g+h+i+j+k);
+	}
+			//Login Successful??
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String user = textField.getText();
+		String password = textField_1.getText();
+		
+		String user1 = textField.getText();
+		String password1 = textField_1.getText();
+		
+		String user2 = textField.getText();
+		String password2 = textField_1.getText();
+		
+		if (user.equals("Aaron Samuels") && password.equals("83746578"))
+		{	
+			System.out.println("Login Succefull");
+			
+		if (user1.equals("Regina George") && password1.equals("27475839"))
+				
+			System.out.println("Login Succefull");
+			
+		if (user2.equals("Cady Heron") && password2.equals("95738494"))
+			
+			System.out.println("Login Succefull");
+		
+		}
+		
+		
+			else
+			{
+				if (user != ("Aaron Samuels") && password != ("83746578"));
+				if (user1 != ("Regina George") && password1 != ("27475839"));
+				if (user2 != ("Cady Heron") && password2 != ("95738494"));
+					ErrorInvalidInformation ie = new ErrorInvalidInformation();
+					ie.setVisible(true);
+
+						
+			}
 	}
 }
